@@ -58,11 +58,11 @@ def openroute():
     return 'This is a Public or Open'
 
 
-@app.route('/logout', methods=['POST'])
+@app.route('/logout')
 def logout():
     session.clear()
     session['logged_in'] = False
-    return redirect("/login")
+    return redirect("/")
 
 
 if __name__ == "__main__":
